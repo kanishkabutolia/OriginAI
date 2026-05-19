@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OriginAI - Knowledge Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="Main">
+        <div class="navbar" id="sidebar">
+            <div class="brand-container">
+                <div class="logo-box">O</div>
+                <div>
+                    <h1 class="brand-title">OriginAI</h1>
+                    <span class="brand-subtitle">Knowledge Engine</span>
+                </div>
+            </div>
+
+            <button id="new-chat"><i data-lucide="plus"></i> New Chat</button>
+            <button id="search-chat"><img src="Images/search.png" alt="Search">Search Chat</button>
+            
+            <p class="section-title">Recent Chats</p>
+            <hr class="nav-divider">
+            
+            <div class="recent-chats-container" id="recentChats">
+                <button class="asked-chat-btn active-chat">Quantum Computing</button>
+                <button class="asked-chat-btn">Explain RAG Architecture</button>
+            </div>
+
+            <div class="pdf-panel">
+                <div class="pdf-panel-header">
+                    <span class="panel-label">Document Dataset</span>
+                    <div class="status-group">
+                        <span class="status-indicator active" id="statusIndicator"></span>
+                        <span class="status-text" id="statusText">Active</span>
+                    </div>
+                </div>
+                
+                <div class="pdf-meta-box" id="pdfMetaBox">
+                    <div class="pdf-meta-info">
+                        <p class="pdf-name" id="pdfName">dataset.pdf</p>
+                        <p class="pdf-pages" id="pdfPages">Indexed Vector Map</p>
+                    </div>
+                    <button class="flush-btn" id="flushBtn">Flush</button>
+                </div>
+                
+                <button class="config-btn"><i data-lucide="sliders-horizontal" size="14"></i> Engine Configuration</button>
+            </div>
+        </div>
+        
+        <div class="right">
+            <header class="chat-header">
+                <div class="header-title-group">
+                    <button class="mobile-toggle" id="mobileToggle"><i data-lucide="menu"></i></button>
+                    <div>
+                        <h2 class="current-chat-title" id="chatTitle">Quantum Computing</h2>
+                        <p class="header-subtitle">Secure Context Environment Active</p>
+                    </div>
+                </div>
+
+                <div class="mode-selector">
+                    <button class="mode-btn" data-mode="PDF_FIRST">PDF First</button>
+                    <button class="mode-btn" data-mode="AI_MODE">AI Mode</button>
+                    <button class="mode-btn active" data-mode="HYBRID">Hybrid Mode</button>
+                </div>
+            </header>
+            
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <div class="badge-row">
+                        <span class="source-badge pdf-badge"><i data-lucide="file-text"></i> FROM PDF DOCUMENT DATASET</span>
+                    </div>
+                    Hello! I am OriginAI. Ask me anything about your uploaded PDF dataset.
+                </div>
+            </div>
+            
+            <div class="chat-input-area">
+                <div class="input-wrapper">
+                    <input type="text" id="userInput" placeholder="Inquire parsing command from indexed document space..." autocomplete="off">
+                    <button id="sendBtn"><i data-lucide="send"></i></button>
+                </div>
+                <p class="tagline">Knowledge First. Intelligence Always.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
